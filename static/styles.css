@@ -1,0 +1,805 @@
+/* styles.css */
+html {
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+}
+
+body {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100%;
+}
+
+
+
+body {
+    background: linear-gradient(to top, #c471f5 0%, #fa71cd 100%);
+    color: #FFFFFF; /* Ensure text is readable against the dark background */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Ensure the gradient covers the full viewport height */
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it's above other content */
+    background-color: #262626; /* Darker shade for the navbar */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.navbar a, .navbar button {
+    color: #FFFFFF;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+.nav-item {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #673AB7;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-item:hover {
+    background-color: #512DA8; /* Darker purple on hover */
+}
+
+.register-button {
+    background-color: #673AB7; /* Purple background */
+    color: #FFFFFF; /* White text */
+    /* Add other styles as needed */
+}
+
+
+.btn {
+    background-color: #673AB7; /* Purple theme */
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #512DA8; /* Darker purple on hover */
+}
+
+/* Home section */
+#home {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Adjust as needed */
+    overflow: hidden;
+    padding-top: 60px; /* Adjust based on the height of your menu bar */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#myVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the video covers the entire area */
+    z-index: -1; /* Ensure the video is behind the content */
+}
+
+.content {
+    color: #fff;
+    text-align: center;
+    z-index: 1;
+}
+
+.content h1, .content h2 {
+    margin: 0;
+}
+
+/* About Us section */
+#about {
+    background-color: #663dff;
+    background-image: linear-gradient(319deg, #663dff 0%, #aa00ff 37%, #cc4499 100%);
+    color: #FFFFFF; /* Ensure text is readable against the dark background */
+    height: 100vh; /* Adjust as needed */
+    padding: 40px 0; /* Adjust as needed */
+}
+
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+.about-heading {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 960px; /* Adjust as needed */
+    margin: 0 auto;
+}
+
+.about-content p {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.about-video {
+    flex: 1;
+    max-width: 50%; /* Adjust as needed */
+}
+/* Define the zoom-in animation */
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Define the floating animation */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.about-heading, .about-content p {
+    animation: zoomIn 1s ease-out;
+}
+
+.about-video {
+    animation: float 2s ease-in-out infinite;
+}
+.animate .about-heading, .animate .about-content p {
+    animation: zoomIn 1s ease-out forwards;
+}
+
+.animate .about-video {
+    animation: float 2s ease-in-out infinite;
+}
+
+/*CONATCT US */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background: #101224;
+}
+
+/*---------------------------INFO SECTION -----------------------------------------*/
+#gradient-section {
+    background-color: #663dff;
+    background-image: linear-gradient(319deg, #663dff 0%, #aa00ff 37%, #cc4499 100%);    /* Additional styling as needed */
+    color: whitesmoke;
+    padding-bottom: 50px;
+    padding-top: 150px;
+}
+
+.container-258 {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+  }
+
+  .container-265 {
+    margin: 0 4.6px 9px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1229.2px;
+    box-sizing: border-box;
+  }
+
+  .container-257 {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+  }
+
+  .container-249 {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+  }
+
+  .container-255 {
+    margin: 0 23.7px 135.5px 0;
+    display: flex;
+    flex-direction: row;
+ 
+ 
+    box-sizing: border-box;
+  }
+
+  .section-150000 {
+    margin: 8px 0 4px 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1;
+    color: whitesmoke;
+    padding-left: 40px;
+  }
+
+  .section-150 {
+    margin: 8px 0 4px 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1;
+    color: whitesmoke;
+  }
+
+  .section-60 {
+    margin: 8px 0 4px 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1;
+    color: whitesmoke;
+  }
+
+  .section-15000000 {
+    margin: 8px 0 4px 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 36px; /* Match the font size of .section-150000 */
+    line-height: 1;
+    color: whitesmoke;
+    padding-left: 40px; /* Adjust padding as needed */
+}
+
+
+  .section-solutions-deployed-worldwide {
+    
+    margin-right: 12px;
+    width: 350.4px;
+    overflow-wrap: break-word;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: whitesmoke;
+    padding-left: 80px;
+  }
+
+  .section-partners-worldwide {
+    margin-right: 12px;
+    width: 350.4px;
+    overflow-wrap: break-word;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: whitesmoke;
+    padding-left: 65px;
+  }
+
+  .section-countries {
+    margin-right: 12px;
+    width: 350.4px;
+    overflow-wrap: break-word;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: whitesmoke;
+    padding-left: 45px;
+  }
+
+  .section-people-impacted {
+    margin: 8px 0 4px 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 17px; /* Match the font size of .section-solutions-deployed-worldwide */
+    line-height: 1.5;
+    color: whitesmoke;
+    padding-left: 40px; /* Adjust padding as needed */
+}
+
+
+/* Contact Section */
+.contact-container {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.contact-heading {
+    margin-bottom: 20px; /* Add some space between the heading and the map */
+    color: #FFFFFF;
+}
+
+.image-address-container {
+    display: flex; /* Use Flexbox for layout */
+    justify-content: space-between; /* Align items to the left and right */
+    width: 100%; /* Ensure the container takes full width */
+    max-width: 1200px; /* Adjust as needed */
+    padding: 20px; /* Add some padding around the container */
+}
+
+.world-map-container {
+    flex: 1; /* Take up all available space on the left */
+    max-width: 50%; /* Adjust as needed */
+    position: relative;
+}
+
+.world-map {
+    width: 100%;
+    height: auto;
+}
+
+.contact-info {
+    flex: 1; /* Take up all available space on the right */
+    max-width: 50%; /* Adjust as needed */
+    padding-left: 250px; /* Add spacing between the map and contact info */
+    color: #FFFFFF; /* Ensure text color is white for better contrast */
+}
+
+/* ---------------------LOGIN PAGE --------------------------*/
+.login-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #673AB7;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #512DA8;
+}
+
+*,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #534293;
+}
+.background{
+    width: 360px;
+    height: 420px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    background-color: #cc41ff ;
+}
+.background .shape{
+    height: 250px;
+    width: 250px;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.shape:first-child{
+    background: #05bbaa;
+    left: -150px;
+    top: -150px;
+}
+.shape:last-child{
+    background: #eb5951;
+    right: -120px;
+    bottom: -150px;
+}
+
+form{
+    height: 520px;
+    width: 400px;
+    background-color: rgba(255,255,255,0.13);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 35px;
+}
+
+form *{
+    font-family: 'Poppins',sans-serif;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+
+form h3{
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+}
+
+label{
+    display: block;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+}
+input{
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+}
+::placeholder{
+    color: #e5e5e5;
+}
+button{
+    margin-top: 50px;
+    width: 100%;
+    background-color: #ffffff;
+    color: #080710;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.social{
+    margin-top: 30px;
+    display: flex;
+  }
+  .social div{
+    width: 150px;
+    border-radius: 3px;
+    padding: 5px 10px 10px 5px;
+    background-color: rgba(255,255,255,0.27);
+    color: #eaf0fb;
+    text-align: center;
+  }
+  .social div:hover{
+    background-color: rgba(255,255,255,0.47);
+  }
+  .social .fb{
+    margin-left: 25px;
+  }
+  .social i{
+    margin-right: 4px;
+  }
+
+  /* ---------------------------PORTFOLIO PAEG ----------------------------------------------------*/
+  /* Ensure the background color for the portfolio page is applied */
+  .portfolio-page {
+    background-color: #534293;
+}
+
+/* Navbar styling */
+.portfolio-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it's above other content */
+    background-color: #262626; /* Darker shade for the navbar */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.portfolio-navbar a, .portfolio-navbar button {
+    color: #FFFFFF;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+.portfolio-navbar .nav-item {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #673AB7;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.portfolio-navbar .nav-item:hover {
+    background-color: #512DA8; /* Darker shade on hover */
+}
+
+/* Button styling */
+.portfolio-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #673AB7;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.portfolio-btn:hover {
+    background-color: #512DA8; /* Darker purple on hover */
+}
+
+/* User details styling */
+.user-details {
+    padding-top: 80px; /* Adjust based on the height of your navbar */
+}
+
+/* Ensure the body padding is applied correctly */
+body.portfolio-page {
+    padding-top: 80px; /* Adjust based on the height of your navbar */
+    margin: 0;
+    padding: 0;
+    background-color: #534293; /* Ensure this is the desired background color */
+}
+
+/* User info styling */
+.user-info {
+    display: flex;
+    align-items: center; /* Vertically align items in the center */
+}
+
+.user-info img {
+    width: 250px; /* Increase the size of the user photo */
+    height: 250px; /* Maintain aspect ratio */
+    border-radius: 50%; /* Make the photo circular */
+    margin-right: 20px; /* Add some space between the photo and text */
+}
+
+.user-text {
+    display: flex;
+    flex-direction: column; /* Stack text elements vertically */
+    color: #FFFFFF;
+    
+}
+
+/* Style for the new section */
+/* Style for the "Hello Username" section */
+.hello-username-section {
+    background-color: #262626; /* Background color similar to the navbar */
+    color: #FFFFFF; /* Text color */
+    padding: 20px; /* Padding around the text */
+    text-align: center; /* Center the text */
+    width: 100%; /* Ensure it spans the full width */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    margin-bottom: 30px; /* Adds space below the section */
+}
+
+.hello-username-section h2 {
+    margin: 0; /* Remove default margin */
+    text-decoration: underline; /* Add an underline */
+    text-decoration-color: #FFFFFF; /* Underline color */
+    text-decoration-thickness: 2px; /* Underline thickness */    
+}
+
+/* Style for the "Investments" section */
+.investments-section {
+    text-align: center;
+    margin-bottom: 30px; /* Increased space below the section */
+}
+
+/* Style for the "Watchlist" section */
+.watchlist-section {
+    text-align: center;
+    margin-bottom: 30px; /* Increased space below the section */
+}
+
+/* Style for the "Company Profile" section */
+.company-profile-section {
+    text-align: center;
+    margin-bottom: 30px; /* Increased space below the section */
+}
+
+/* Style the investments, watchlist, and company profile tables */
+.investments-table, .watchlist-table, .company-profile-table {
+    margin: 0 auto; /* Center the table */
+    border-collapse: collapse;
+    width: 80%; /* Adjust width as needed */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); /* 3D effect */
+}
+
+/* Style the table headers and rows */
+.investments-table th, .investments-table td, .watchlist-table th, .watchlist-table td, .company-profile-table th, .company-profile-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Change text color to white */
+.investments-table th, .investments-table td, .watchlist-table th, .watchlist-table td, .company-profile-table th, .company-profile-table td {
+    color: #FFFFFF;
+}
+
+/* Optional: Add a background color to the table headers */
+.investments-table th, .watchlist-table th, .company-profile-table th {
+    background-color: #4CAF50;
+}
+
+.balance-section {
+    background-color: #f0f0f0; /* Light grey background */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Shadow effect */
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px; /* Optional: rounded corners */
+}
+
+
+.scrolling-banner{
+    color: whitesmoke;
+    margin-top: 100px;
+}
+
+.popup {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    animation: slideUp 0.5s ease-out forwards;
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.add-button {
+    background-color: whitesmoke; /* Green */
+    border: none;
+    color: black;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.add-button:hover {
+    background-color: whitesmoke;
+}
+
+.deposit-container {
+    text-align: left; /* Aligns the button to the left */
+    margin-top: 30px; /* Adds some space above the button */
+    padding-bottom: 30px;
+    margin-left: 750px;
+}
+
+.deposit-btn {
+    background-color: white; /* White background */
+    color: black; /* Black text */
+    border: none; /* Removes default button border */
+    padding: 10px 20PX; /* Adjust padding to fit the text */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Cursor style */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    transition: all 0.3s ease; /* Transition for hover effect */
+    position:relative; /* Positioning for 3D effect */
+    overflow: hidden; /* Hide overflow for 3D effect */
+    display:inline-block; /* Allows the button to fit its content */
+    width: fit-content;
+    text-align: center; /* Aligns the text to the left */
+    margin: 4px 2px;
+}
+
+
+/* -----------------------------------REGISTRATION PAGE ----------------------------------------*/
+.popup1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: opacity 0.3s, transform 0.3s;
+    color: whitesmoke;
+}
+
+.popup1.show {
+    opacity: 1;
+    transform: translateY(0);
+    color: whitesmoke;
+}
+
+.pop-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    color: whitesmoke;
+}
+
+#linechart {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
