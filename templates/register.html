@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</head>
+<body>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    <form id="registerForm" action="/register" method="post">
+        <div class="row">
+            <input type="text" name="username" placeholder="Username" class="login-input">
+            <input type="email" name="email" placeholder="Email" class="login-input">
+        </div>
+        <input type="tel" name="phone" placeholder="Phone Number" class="login-input">
+        <div class="row">
+            <input type="password" name="password" placeholder="Create Password" class="login-input">
+            <input type="password" name="confirm_password" placeholder="Confirm Password" class="login-input">
+        </div>
+        <button type="submit">Register</button>
+        <div class="social">
+            <div class="fb">Facebook</div>
+            <div>Google</div>
+        </div>
+    </form>
+    <!-- Popup for displaying flash messages -->
+    <!-- Popup for displaying flash messages -->
+<div id="depositPopup" class="popup" style="display: none;">
+    <div class="popup-content">
+        <p id="message"></p>
+    </div>
+</div>
+    <!-- Flashed Messages Section -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        {% for category, message in messages %}
+            <div class="alert alert-{{ category }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+    {% endwith %}
+</body>
+</html>

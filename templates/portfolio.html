@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src = "https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+</head>
+<body class="portfolio-page" style="background-image: url('PBG.png'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+    <!-- Navbar -->
+    <nav class="navbar portfolio-navbar">
+        <div class="navbar-left">
+            <a href="#" class="btn portfolio-btn">Home</a>
+            <a href="#investments-section" class="btn portfolio-btn">Investments</a>
+            <a href="#" class="btn portfolio-btn">Profile</a>
+        </div>
+        <div class="navbar-right">
+            <a href="/" class="btn portfolio-btn">Logout</a>
+        </div>
+    </nav>
+    <!-- User Details and Welcome Message -->
+    <div class="user-details">
+        <div class="user-info">
+            <!-- Use a default image if the user does not have a specific photo URL -->
+            <img src="{{ url_for('static', filename='836.jpg') }}" alt="User Photo">
+            <div class="user-text">
+                <h2>{{ user.username }}</h2>
+                <p>Phone: {{ user.phone }}</p>
+                <p>Email: {{ user.email }}</p>
+                <p>Invested Value: ${{ user.invested_value }}</p>
+            </div>
+        </div>
+        <div class="hello-username-section">
+            <h2>Hello, {{ user.username }}!</h2>
+        </div>
+    </div>
+    <!-- Investments Section -->
+    <section class="investments-section">
+        <h2>Investments</h2>
+        <table class="investments-table">
+            <thead>
+                <tr>
+                    <th>Coin Name</th>
+                    <th>Amount Invested</th>
+                    <th>Loss/Gain</th>
+                    <th>Current Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for investment in investments %}
+                    <tr>
+                        <td>{{ investment.crypto_id }}</td>
+                        <td>${{ investment.amount_invested }}</td>
+                        <td>{{ investment.profit_loss }}</td>
+                        <td>$65000</td> <!-- Static value for demonstration -->
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </section>
+    <!-- Watchlist Section -->
+    <section class="watchlist-section">
+        <h2>Watchlist</h2>
+        <table class="watchlist-table">
+            <thead>
+                <tr>
+                    <th>Asset Name</th>
+                    <th>Current Price</th>
+                    <th>Change</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for asset in watchlist %}
+                    <tr>
+                        <td>{{ asset.crypto_short_name }}</td>
+                        <td>$4500</td> <!-- Static value for demonstration -->
+                        <td>{{ asset.change }}</td>
+                        <td><button class="add-investment" data-asset-id="{{ asset.id }}">Add</button></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </section>
+    <!-- Company Profile Section -->
+    <section class="company-profile-section">
+        <h2>Company Profile</h2>
+        <table class="company-profile-table">
+            <thead>
+                <tr>
+                    <th>Symbol</th>
+                    <th>MarketCap</th>
+                    <th>AssetNames</th>
+                    <th>CompanyInvestment</th>
+                    <th></th> <!-- New column for the action -->
+                </tr>
+            </thead>
+            <tbody>
+                {% for profile in company_profile %}
+                    <tr>
+                        <td>{{ profile.Symbol }}</td>
+                        <td>${{ profile.MarketCap }}</td>
+                        <td>{{ profile.AssetNames }}</td>
+                        <td>${{ profile.CompanyInvestment }}</td>
+                        <td>
+                            <button class="add-button">Add</button> <!-- Add button in a new cell -->
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </section>
+    <!-- User Details and Welcome Message -->
+    <div class="user-details">
+        <div class="user-info">
+            <!-- Existing user details here -->
+        </div>
+        <!-- Balance Section -->
+        <div class="balance-section">
+            <h2>Balance: ${{ balance }}</h2>
+        </div>
+    </div>
+
+    <!-- Deposit Button Container -->
+<div class="deposit-container">
+    <!-- Deposit Button -->
+    <button id="depositButton" class="deposit-btn">Deposit</button>
+</div>
+<canvas id = "linechart" width="900" height="400"></canvas>
+<!-- Deposit Popup -->
+<div id="depositPopup" class="popup">
+    <div class="popup-content">
+        <p>REQUEST SENT</p>
+        <p>We will get back to you soon!!</p>
+    </div>
+</div>
+
+<!-- Popup -->
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <p>REQUEST SENT!!</p>
+    </div>
+</div>
+
+<!-- Notice Section -->
+<section class="notice-section">
+    <div class="scrolling-banner">
+        <marquee>$BTC Hit $67,000 today!!</marquee>
+    </div>
+</section>
+
+<script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>

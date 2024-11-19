@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    <form action="/loginpage" method="post">
+        <h3>Login Here</h3>
+        <label for="email">Email</label>
+        <input type="email" placeholder="Email" id="email" name="email" required>
+        <label for="password">Password</label>
+        <input type="password" placeholder="Password" id="password" name="password" required>
+        <button type="submit">Log In</button>
+        <div class="social">
+            <div class="go"><i class="fab fa-google"></i> Google</div>
+            <div class="fb"><i class="fab fa-facebook"></i> Facebook</div>
+        </div>
+    </form>
+    <!-- Error message and registration link will be dynamically inserted here by Flask -->
+    {% if msg %}
+    <p>{{ msg }}</p>
+    {% endif %}
+    {% if show_register_link %}
+    <p>If you don't have an account, <a href="/register.html">register here</a>.</p>
+    {% endif %} 
+</body>
+</html>
