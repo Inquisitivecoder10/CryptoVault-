@@ -3,14 +3,17 @@ from flask_mysqldb import MySQL
 import MySQLdb.cursors
 import re
 import hashlib
+import os
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key' # Replace 'your_secret_key' with your actual secret key
+app.secret_key = os.getenv('SECRET_KEY', 'your_secret_key')
 
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = 'King@2024.'
 app.config['MYSQL_DB'] = 'cv10'
+app.config['MYSQL_DB'] = os.getenv('MYSQL_DB', 'cv10')
 
 mysql = MySQL(app)
 
