@@ -1,0 +1,4 @@
+flask
+flask-cors
+psycopg2-binary (if using PostgreSQL)
+mysql-connector-python (if using MySQL)
